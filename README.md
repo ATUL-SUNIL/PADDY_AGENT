@@ -80,7 +80,7 @@ model:
 
 ## Notes
 
-* The agent is trained offline (supervised BC), not through reinforcement learning.
+* The agent is trained offline (supervised BC).
 * Exported policy is used by NetLogo (`policy_table.csv`) to drive irrigation decisions.
 * Data must be consistent with NetLogo logging format (`delta_lake_L`, `irrigateN_mm`, etc.).
 
