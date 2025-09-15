@@ -1,0 +1,1 @@
+tick,stage,month,north_mm,south_mm,pool_mm,canal_mm,lake_mm,poolN_mgL,poolP_mgL,canalN_mgL,canalP_mgL,lakeN_mgL,lakeP_mgL,target_mm,defN_mm,defS_mm,delta_lake_L,delta_N_to_lake_mg,delta_P_to_lake_mg,irrigateN_mm,irrigateS_mm,drainN_mm,drainS_mm,pool_ratio,control_mode,rain_today_mm,actual_loss_mm,growth_avg_pct,growthN_pct,growthS_pct

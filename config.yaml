@@ -1,0 +1,47 @@
+# config.yaml
+data_glob: "data/merged_dataset.csv"
+policy_table_csv: "models/policy_table.csv"
+bc_model_path: "models/bc_model.joblib"
+meta_file: "models/bc_meta.json"
+
+stage_durations: [7, 10, 21, 14, 24, 35, 10, 30]
+drain_stages: [3, 7]
+flood_stages: [1, 2, 5]
+target_by_stage: [15, 35, 25, 0, 25, 25, 25, 0]   # used by exporter
+
+features:
+  - stage
+  - norm_day
+  - month
+  - north_mm
+  - south_mm
+  - target_mm
+  - defN_mm
+  - defS_mm
+  - canal_mm
+  - pool_ratio
+  - is_drain_stage
+  - is_flood_stage
+  - rain_mm          # <— new, optional
+  - loss_mm          # <— new, optional
+
+actions:
+  - irrigateN_mm
+  - irrigateS_mm
+  - drainN_mm
+  - drainS_mm
+
+model:
+  type: "random_forest"
+  n_estimators: 300
+  max_depth: 12
+  random_state: 42
+
+train:
+  val_split: 0.2
+  shuffle: true
+  seed: 42
+  clip_actions: true
+  limits:
+    irrigate_max: 5.0
+    drain_max: 3.0

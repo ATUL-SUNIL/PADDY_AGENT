@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+
+# --- Virtual environments ---
+.venv/
+env/
+venv/
+.venv/*
+bin/
+lib/
+include/
+pyvenv.cfg
+
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Data / outputs ---
+data/merged_dataset.csv
+data/diagnostics_report.csv
+data/*/*.csv   # logs from NetLogo runs (rule_ep, agent_ep, eval_ep, paired_ep)
+!data/.gitkeep # keep folder structure if needed
+
+# --- Models ---
+models/*.joblib
+models/*.json
+models/*.pkl
+models/*.h5
+models/policy_table.csv
+
+# --- Notebooks / cache ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.pkl
